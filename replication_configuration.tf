@@ -25,6 +25,8 @@ locals {
           }
         }
 
+        delete_marker_replication = "Disabled"
+
         destination = {
           bucket             = module.replica.s3_bucket_arn
           storage_class      = "STANDARD"
@@ -49,6 +51,8 @@ locals {
         filter = {
           prefix = "archive"
         }
+
+        delete_marker_replication = "Disabled"
 
         destination = {
           bucket             = module.replica.s3_bucket_arn
