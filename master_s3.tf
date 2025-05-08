@@ -9,7 +9,6 @@ module "master" {
 
   bucket = local.master_bucket_id
 
-  acl                     = "private"
   block_public_acls       = true
   block_public_policy     = true
   restrict_public_buckets = true
