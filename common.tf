@@ -40,6 +40,9 @@ locals {
       # - Never Expire
       id      = "No expiration (Default)"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       transition = [{
         days          = 360
         storage_class = "GLACIER"
@@ -60,6 +63,9 @@ locals {
       # - Expires after 1 year
       id      = "1 year Glacier"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "1y",
         Archive   = "Glacier"
@@ -83,6 +89,9 @@ locals {
       # - Expires after 1 year
       id      = "1 year"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "1y"
       }
@@ -101,6 +110,9 @@ locals {
       # - Expires after 90 days in Glacier (97 since creation)
       id      = "90 day Glacier"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "90d"
         Archive   = "Glacier"
@@ -124,6 +136,9 @@ locals {
       # - Expires after 97 days (to match 90 day glacier policy)
       id      = "90 day"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "90d"
       }
@@ -141,6 +156,9 @@ locals {
       # - Expires after 30 days
       id      = "30 day"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "30d"
       }
@@ -157,6 +175,9 @@ locals {
       # - Expires after 7 days
       id      = "7d day"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "7d"
       }
@@ -173,6 +194,9 @@ locals {
       # - Expires after 3 days
       id      = "3d day"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "3d"
       }
@@ -189,6 +213,9 @@ locals {
       # - Expires after 24 hours
       id      = "24 hours"
       enabled = true
+      filter = {
+        prefix = ""
+      }
       tags = {
         Retention = "24h"
       }

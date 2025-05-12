@@ -4,12 +4,11 @@
 
 module "replica" {
   source    = "terraform-aws-modules/s3-bucket/aws"
-  version   = "v2.9.0"
+  version   = "4.8.0"
   providers = { aws = aws.replica }
 
   bucket = local.replica_bucket_id
 
-  acl                     = "private"
   block_public_acls       = true
   block_public_policy     = true
   restrict_public_buckets = true
